@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvThreadListAvt"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:cardCornerRadius="16dp">
+
+        <View
+            android:id="@+id/vThreadListItemAvtBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple_700"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvThreadListItemAvt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="T" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvThreadListItemIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvThreadListItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/cvThreadListAvt"
+        android:textColor="#23497c"
+        android:text="item"
+        android:textSize="17dp"
+        android:paddingHorizontal="@dimen/nav_header_vertical_spacing"
+        style="@style/TextAppearance.AppCompat.Body2"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvThreadListItemAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/cvThreadListAvt"
+        android:layout_below="@+id/tvThreadListItemName"
+        android:textColor="#757474"
+        android:text="Tieu Long Ha Yesterday at 2:23 PM"
+        android:textSize="13dp"
+        android:paddingHorizontal="@dimen/nav_header_vertical_spacing"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvThreadListItemRepliesAndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/cvThreadListAvt"
+        android:layout_below="@+id/tvThreadListItemAuthor"
+        android:textColor="#757474"
+        android:text="Replies: 19 . Yesterday at 9:45 PM"
+        android:textSize="13dp"
+        android:paddingHorizontal="@dimen/nav_header_vertical_spacing"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#AAA9A9"
+        android:layout_below="@+id/tvThreadListItemRepliesAndTime"
+        android:layout_marginTop="5dp"
+        />
+</RelativeLayout>

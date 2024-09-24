@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/header"
+    android:paddingVertical="5dp"
+    android:paddingHorizontal="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBottomBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        app:cardCornerRadius="16dp"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <View
+            android:id="@+id/vBottomBarAvtBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#C7BCE1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBottomBarAvt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="G" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvBottomBarIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/cvBottomBar"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnBottomBarFirst"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="16dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/baseline_first_page_24"
+                android:layout_gravity="center"
+                app:tint="@color/header"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcyBottomBarPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/bottom_bar_page_item"
+            android:layout_marginHorizontal="30dp"
+            android:layout_alignStart="@+id/btnBottomBarFirst"
+            android:layout_alignEnd="@id/btnBottomBarLast"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnBottomBarLast"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="16dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/baseline_first_page_24"
+                android:layout_gravity="center"
+                app:tint="@color/header"
+                android:rotation="180"
+                />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:paddingTop="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPostAvt"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:cardCornerRadius="16dp">
+
+        <View
+            android:id="@+id/vPostAvtBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/teal_700" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPostAvt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="T" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvPostIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPostAuthor"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/cvPostAvt"
+        android:paddingHorizontal="@dimen/nav_header_vertical_spacing"
+        android:text="Tieu Long Ha"
+        android:textColor="#23497c"
+        android:textSize="17dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPostNumber"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:paddingHorizontal="@dimen/nav_header_vertical_spacing"
+        android:text="#1"
+        android:textColor="@color/page_active"
+        android:textSize="17dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPostTime"
+        style="@style/TextAppearance.Compat.Notification.Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPostAuthor"
+        android:layout_alignParentEnd="true"
+        android:paddingHorizontal="@dimen/nav_header_vertical_spacing"
+        android:text="Today at 2:01 PM"
+        android:textColor="@color/page_active"
+        android:textSize="14dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAuthorTitle"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPostAuthor"
+        android:layout_toEndOf="@+id/cvPostAvt"
+        android:paddingHorizontal="@dimen/nav_header_vertical_spacing"
+        android:text="Senior Member"
+        android:textColor="#757474"
+        android:textSize="13dp" />
+
+    <View
+        android:id="@+id/horizontalLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tvAuthorTitle"
+        android:layout_marginTop="5dp"
+        android:background="#AAA9A9" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontalLine">
+
+        <!--        <pl.droidsonroids.gif.GifTextView-->
+        <!--            android:id="@+id/tvContent"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_margin="8dp" />-->
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/nav_header_vertical_spacing"
+            android:text="Html content" />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/rlControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cvContent"
+        android:layout_margin="@dimen/nav_header_vertical_spacing">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnReport"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="16dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_report_problem_24"
+                app:tint="?attr/colorError" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnReaction"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnQuote"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="16dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_add_reaction_24"
+                app:tint="@color/purple_200" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnQuote"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_toLeftOf="@id/btnReply"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="16dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_format_quote_24"
+                app:tint="@color/design_default_color_secondary_variant" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnReply"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="16dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_quickreply_24"
+                app:tint="@android:color/holo_orange_dark" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/darker_gray" />
+
+</RelativeLayout>

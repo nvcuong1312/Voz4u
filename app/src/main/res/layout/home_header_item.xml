@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imvIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_chat"
+        app:tint="#588BC3"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imvIcon"
+        android:textColor="#23497c"
+        android:text="item"
+        android:textSize="17dp"
+        android:paddingHorizontal="@dimen/nav_header_vertical_spacing"
+        style="@style/TextAppearance.AppCompat.Body2"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvItemThread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imvIcon"
+        android:layout_below="@+id/tvItemName"
+        android:textColor="#757474"
+        android:text="Threads: 10k"
+        android:textSize="13dp"
+        android:paddingHorizontal="@dimen/nav_header_vertical_spacing"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvItemMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tvItemThread"
+        android:layout_below="@+id/tvItemName"
+        android:textColor="#757474"
+        android:text="Messages: 14k"
+        android:textSize="13dp"
+        android:paddingHorizontal="@dimen/nav_header_vertical_spacing"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#AAA9A9"
+        android:layout_below="@+id/tvItemMessage"
+        android:layout_marginTop="5dp"
+        />
+</RelativeLayout>
